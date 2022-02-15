@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  mongodb-server:
+    image: mongo
+    container_name: empresa-server
+    ports:
+      - 27017:27017
+    expose:
+      - 27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: empresa
+      MONGO_INITDB_ROOT_PASSWORD: empresa123
+      MONGO_INITDB_DATABASE: empresa
